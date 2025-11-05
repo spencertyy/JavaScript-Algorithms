@@ -18,6 +18,10 @@ Input: prices = [7,6,4,3,1]
 Output: 0
 Explanation: In this case, no transactions are done and the max profit = 0.
  
+限制条件：
+
+1 <= prices.length <= 105
+0 <= prices[i] <= 104
 
  /**
  * @param {number[]} prices
@@ -35,4 +39,10 @@ var maxProfit = function(prices) {
         }//一直更新maxProfit直到 当前价格-最少价格买入 等于我们最大的利润
     }
     return maxProfit;
-};
+};//time O(n). Space O(1)
+
+
+
+
+
+
