@@ -39,11 +39,22 @@ var productExceptSelf = function(nums) {
 
     let right =1;
     for(let i = n- 1; i>= 0; i--){
-        ans[i] *= right;
-        right *= nums[i];
+        ans[i] *= right; //① 把“右边所有数的乘积”乘进来
+        right *= nums[i];// ② 更新 right：把当前这个数并入，留给左边下一格用
     }
     return ans;
 };
 
 
-//总结 这个太难了 mid的题目 有点难 
+
+
+
+//① ans[i] *= right（得到“除自己外”临时结果）
+
+//② right *= nums[i]（更新给下一格左边用）
+
+
+
+
+
+//总结 ：mid的这个题目 有点难 
